@@ -22,7 +22,7 @@ import Vision
 
 
 
-class ViewController: UIViewController {
+class ProcessingVC: UIViewController {
     
     // VNRequest: Either Retangles or Landmarks
     var faceDetectionRequest: VNRequest!
@@ -271,7 +271,7 @@ class ViewController: UIViewController {
         
         if session.canAddOutput(videoDataOutput) {
             videoDataOutput.alwaysDiscardsLateVideoFrames = true
-            videoDataOutput.setSampleBufferDelegate(self, queue: videoDataOutputQueue)
+            videoDataOutput.setSampleBufferDelegate(self as! AVCaptureVideoDataOutputSampleBufferDelegate, queue: videoDataOutputQueue)
             session.addOutput(videoDataOutput)
         }
         else {
@@ -337,7 +337,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController {
+extension ProcessingVC {
     private func addObservers() {
         /*
          Observe the previewView's regionOfInterest to update the AVCaptureMetadataOutput's
@@ -400,7 +400,7 @@ extension ViewController {
     }
 }
 
-extension ViewController {
+extension ProcessingVC {
     func setupVision() {
         self.requests = [faceDetectionRequest]
     }
@@ -474,7 +474,7 @@ extension ViewController {
     
 }
 
-extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate{
+extension ProcessingVC: AVCaptureVideoDataOutputSampleBufferDelegate{
     // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer),
