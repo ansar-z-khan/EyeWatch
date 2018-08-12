@@ -11,6 +11,7 @@ import UIKit
 
 class FollowInstructionsVC: UIViewController {
     let back = UIButton()
+    let go = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,19 @@ class FollowInstructionsVC: UIViewController {
         back.addTarget(self, action: #selector(FollowInstructionsVC.backUp), for: .touchUpInside)
         back.addTarget(self, action: #selector(FollowInstructionsVC.backCorrect), for: .touchUpOutside)
         view.addSubview(back)
+        
+        //go button
+        go.frame.size = CGSize(width: screenW-60, height: 60)
+        go.layer.cornerRadius = 25
+        go.center = CGPoint(x: screenW/2, y: screenH-140)
+        go.setTitle("Go", for: .normal)
+        go.setTitleColor(#colorLiteral(red: 0.4, green: 0.7294117647, blue: 0.9607843137, alpha: 1), for: .normal)
+        go.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 40)
+        go.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        go.addTarget(self, action: #selector(FollowInstructionsVC.goDown), for: .touchDown)
+        go.addTarget(self, action: #selector(FollowInstructionsVC.goUp), for: .touchUpInside)
+        go.addTarget(self, action: #selector(FollowInstructionsVC.goCorrect), for: .touchUpOutside)
+        view.addSubview(go)
     }
     
     @objc func backDown() {
@@ -54,9 +68,23 @@ class FollowInstructionsVC: UIViewController {
     @objc func backUp() {
         back.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         dismiss(animated: true)
+        
     }
     
     @objc func backCorrect() {
         back.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    }
+    
+    @objc func goDown() {
+        go.backgroundColor = #colorLiteral(red: 0.9473403096, green: 0.9403244853, blue: 0.9527093768, alpha: 1)
+    }
+    
+    @objc func goUp() {
+        go.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        present(CalibrationVC(), animated: true)
+    }
+    
+    @objc func goCorrect() {
+        go.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
 }

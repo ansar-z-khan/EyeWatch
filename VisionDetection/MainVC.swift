@@ -38,6 +38,9 @@ class MainVC: UIViewController {
         view.layer.addSublayer(eye.circleLayer)
         view.layer.addSublayer(eye.starLayer)
         view.layer.addSublayer(eye.pupilLayer)
+        let block = UIView(frame: CGRect(x: 0, y: screenH, width: screenW, height: screenW/2))
+        block.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        view.addSubview(block)
         
         //title
         let title = UILabel()
@@ -85,3 +88,4 @@ class MainVC: UIViewController {
     }
     
 }
+
