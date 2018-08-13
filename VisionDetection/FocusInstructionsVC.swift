@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FollowInstructionsVC: UIViewController {
+class FocusInstructionsVC: UIViewController {
     let back = UIButton()
     let go = UIButton()
     var inGame: Bool = false
@@ -79,9 +79,9 @@ class FollowInstructionsVC: UIViewController {
             go.setTitleColor(#colorLiteral(red: 0.4, green: 0.7294117647, blue: 0.9607843137, alpha: 1), for: .normal)
             go.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 40)
             go.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            go.addTarget(self, action: #selector(FollowInstructionsVC.goDown), for: .touchDown)
-            go.addTarget(self, action: #selector(FollowInstructionsVC.goUp), for: .touchUpInside)
-            go.addTarget(self, action: #selector(FollowInstructionsVC.goCorrect), for: .touchUpOutside)
+            go.addTarget(self, action: #selector(FocusInstructionsVC.goDown), for: .touchDown)
+            go.addTarget(self, action: #selector(FocusInstructionsVC.goUp), for: .touchUpInside)
+            go.addTarget(self, action: #selector(FocusInstructionsVC.goCorrect), for: .touchUpOutside)
             view.addSubview(go)
         }
     }
@@ -109,12 +109,11 @@ class FollowInstructionsVC: UIViewController {
         if go.titleLabel?.text == "Go" {
             let vc = CalibrationVC()
             vc.inGame = false
-            vc.game = "follow"
+            vc.game = "focus"
             present(CalibrationVC(), animated: true)
         } else {
             dismiss(animated: true)
         }
-        
     }
     
     @objc func goCorrect() {

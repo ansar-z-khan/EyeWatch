@@ -16,6 +16,8 @@ class CalibrationVC: UIViewController {
     let innerLayer = CAShapeLayer()
     var n = 0
     var anis: [CABasicAnimation] = []
+    var inGame: Bool = false
+    var game: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,7 +111,13 @@ class CalibrationVC: UIViewController {
             
             n += 1
         default:
-            present(FollowInstructionsVC(), animated: false)
+            if inGame {
+                dismiss(animated: true)
+            } else if game == "follow" {
+                //present(followGame(), animated: true)
+            } else {
+                //present(focusGame(), animated: true)
+            }
         }
     }
 }

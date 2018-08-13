@@ -200,8 +200,22 @@ class GameSelectVC: UIViewController {
         followCirc.layer.addSublayer(a9.layer)
         followCirc.layer.addSublayer(a10.layer)
         
-        //make arrows
-        //make buttons work
+        let followTitle = UILabel(frame: CGRect(x: width+30*ratioW, y: 15*ratioH, width: follow.frame.size.width-width-45*ratioW, height: follow.frame.size.height-30*ratioH))
+        followTitle.text = "Follow the Dot"
+        followTitle.numberOfLines = 2
+        followTitle.font = UIFont(name: "Avenir-Heavy", size: 20*ratioW)
+        followTitle.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        follow.addSubview(followTitle)
+        
+        let focusTitle = UILabel(frame: CGRect(x: width+30*ratioW, y: 15*ratioH, width: follow.frame.size.width-width-45*ratioW, height: follow.frame.size.height-30*ratioH))
+        focusTitle.text = "Focus on the Dot"
+        //focusTitle.textAlignment = .center
+        focusTitle.numberOfLines = 2
+        focusTitle.font = UIFont(name: "Avenir-Heavy", size: 20*ratioW)
+        focusTitle.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+        focusTitle.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        focus.addSubview(focusTitle)
+        
         //add labels to buttons
         //start animations
         
@@ -226,7 +240,9 @@ class GameSelectVC: UIViewController {
     
     @objc func followUp() {
         follow.backgroundColor = #colorLiteral(red: 0.1882352941, green: 0.462745098, blue: 0.7058823529, alpha: 1)
-        present(FollowInstructionsVC(), animated: true)
+        let vc = FollowInstructionsVC()
+        vc.inGame = false
+        present(vc, animated: true)
     }
     
     @objc func followCorrect() {
@@ -239,7 +255,9 @@ class GameSelectVC: UIViewController {
     
     @objc func focusUp() {
         focus.backgroundColor = #colorLiteral(red: 0.1882352941, green: 0.462745098, blue: 0.7058823529, alpha: 1)
-        //present(
+        let vc = FocusInstructionsVC()
+        vc.inGame = false
+        present(vc, animated: true)
     }
     
     @objc func focusCorrect() {
