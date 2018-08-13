@@ -114,7 +114,7 @@ class CalibrationVC: UIViewController {
             if inGame {
                 dismiss(animated: true)
             } else if game == "follow" {
-                //present(followGame(), animated: true)
+                present(FollowGameVC(), animated: false)
             } else {
                 //present(focusGame(), animated: true)
             }

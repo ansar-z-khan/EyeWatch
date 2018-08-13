@@ -14,7 +14,7 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        modalTransitionStyle = .crossDissolve
         //useful variables
         let screenW = self.view.frame.size.width
         let screenH = self.view.frame.size.height

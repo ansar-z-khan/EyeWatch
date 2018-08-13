@@ -36,13 +36,12 @@ class FollowInstructionsVC: UIViewController {
         view.addSubview(background)
         
         //back button
-        back.frame = CGRect(x: screenW-60, y: 15, width: 50, height: 50)
-        //back.frame.size = CGSize(width: screenW-60, height: 60)
+        if screenH == 812 {
+            back.frame = CGRect(x: screenW-60, y: 30, width: 50, height: 50)
+        } else {
+            back.frame = CGRect(x: screenW-60, y: 15, width: 50, height: 50)
+        }
         back.layer.cornerRadius = 25
-        //back.center = CGPoint(x: screenW/2, y: screenH-60)
-        //back.setTitle("Back", for: .normal)
-        //back.setTitleColor(#colorLiteral(red: 0.4, green: 0.7294117647, blue: 0.9607843137, alpha: 1), for: .normal)
-        //back.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 40)
         back.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
         back.addTarget(self, action: #selector(FollowInstructionsVC.backDown), for: .touchDown)
         back.addTarget(self, action: #selector(FollowInstructionsVC.backUp), for: .touchUpInside)
@@ -110,7 +109,7 @@ class FollowInstructionsVC: UIViewController {
             let vc = CalibrationVC()
             vc.inGame = false
             vc.game = "follow"
-            present(CalibrationVC(), animated: true)
+            present(vc, animated: true)
         } else {
             dismiss(animated: true)
         }
