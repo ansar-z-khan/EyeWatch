@@ -39,11 +39,12 @@ class ProcessingVC: UIViewController {
         super.viewDidLoad()
         
         pupilPosLabel.text = "Pupil Pos";
-        pupilPosLabel.frame.size = CGSize(width: 200, height: 200)
-        pupilPosLabel.center = CGPoint(x: view.frame.width/2, y: view.frame.height*0.8)
-        pupilPosLabel.font = UIFont(name: "Helvetica", size: 30)
+        pupilPosLabel.frame.size = CGSize(width: view.frame.width*0.95, height: 200)
+        pupilPosLabel.center = CGPoint(x: view.frame.width*0.5, y: view.frame.height*0.8)
+        pupilPosLabel.font = UIFont(name: "Helvetica", size: 20)
         pupilPosLabel.textColor = #colorLiteral(red: 0.09411764706, green: 0.2470588235, blue: 0.4, alpha: 1)
         pupilPosLabel.textAlignment = .center
+        pupilPosLabel.numberOfLines = 0;
         view.addSubview(pupilPosLabel)
         
         // Set up the video preview view.
@@ -439,7 +440,10 @@ extension ProcessingVC {
         let rightEye = Eye(eye: (face.landmarks?.rightEye?.normalizedPoints)!, _pupil: (face.landmarks?.rightPupil?.normalizedPoints)!)
         print("leftX \(leftEye.getPercentX()): leftY \(leftEye.getPercentY()) ")
         print("rightX \(rightEye.getPercentX()): rightY \(rightEye.getPercentY()) ")
-        
+        pupilPosLabel.text = "leftX \(leftEye.getPercentX()): leftY \(leftEye.getPercentY()) \n rightX \(rightEye.getPercentX()): rightY \(rightEye.getPercentY()) "
+        if (Eye.isCrossEyed(left: leftEye, right: rightEye)){
+            AudioServicesPlayAlertSound(1152)
+        }
     }
     func averagePoints(points: [CGPoint]) -> CGPoint{
         var x:CGFloat = 0.0;

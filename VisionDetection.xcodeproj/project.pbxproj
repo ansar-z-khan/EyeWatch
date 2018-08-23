@@ -14,6 +14,7 @@
 		02611D9E1EEA5317009714B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02611D9C1EEA5317009714B8 /* LaunchScreen.storyboard */; };
 		02611DA61EEA5683009714B8 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02611DA51EEA5683009714B8 /* PreviewView.swift */; };
 		205FF064211DECFF00D9CFCA /* Eye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205FF063211DECFF00D9CFCA /* Eye.swift */; };
+		207829B021251F86007A7EBA /* EyeGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207829AF21251F86007A7EBA /* EyeGraphic.swift */; };
 		7C355B242122198C00D17D32 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C355B232122198C00D17D32 /* MenuView.swift */; };
 		7C355B26212219A900D17D32 /* FollowGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C355B25212219A900D17D32 /* FollowGameVC.swift */; };
 		7C355B28212219C400D17D32 /* OpeningVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C355B27212219C400D17D32 /* OpeningVC.swift */; };
@@ -21,7 +22,6 @@
 		7C924551211FD04400492749 /* Arrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C924550211FD04400492749 /* Arrow.swift */; };
 		7C924553211FD0B500492749 /* CalibrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C924552211FD0B500492749 /* CalibrationVC.swift */; };
 		7C924555211FD0D400492749 /* FadingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C924554211FD0D400492749 /* FadingCircle.swift */; };
-		7CB24619211E106200EDB2C5 /* EyeGraphic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB24618211E106200EDB2C5 /* EyeGraphic.swift */; };
 		7CB2461D211E11EF00EDB2C5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2461C211E11EF00EDB2C5 /* MainVC.swift */; };
 		7CB2461F211E121000EDB2C5 /* GameSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2461E211E121000EDB2C5 /* GameSelectVC.swift */; };
 		7CB24621211E123F00EDB2C5 /* FollowInstructionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB24620211E123F00EDB2C5 /* FollowInstructionsVC.swift */; };
@@ -37,6 +37,7 @@
 		02611D9F1EEA5317009714B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02611DA51EEA5683009714B8 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		205FF063211DECFF00D9CFCA /* Eye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eye.swift; sourceTree = "<group>"; };
+		207829AF21251F86007A7EBA /* EyeGraphic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeGraphic.swift; sourceTree = "<group>"; };
 		7C355B232122198C00D17D32 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		7C355B25212219A900D17D32 /* FollowGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowGameVC.swift; sourceTree = "<group>"; };
 		7C355B27212219C400D17D32 /* OpeningVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningVC.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		7C924550211FD04400492749 /* Arrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arrow.swift; sourceTree = "<group>"; };
 		7C924552211FD0B500492749 /* CalibrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationVC.swift; sourceTree = "<group>"; };
 		7C924554211FD0D400492749 /* FadingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingCircle.swift; sourceTree = "<group>"; };
-		7CB24618211E106200EDB2C5 /* EyeGraphic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EyeGraphic.swift; path = "../../../Desktop/Eye Watch/Eye Watch/EyeGraphic.swift"; sourceTree = "<group>"; };
 		7CB2461C211E11EF00EDB2C5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		7CB2461E211E121000EDB2C5 /* GameSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectVC.swift; sourceTree = "<group>"; };
 		7CB24620211E123F00EDB2C5 /* FollowInstructionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowInstructionsVC.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				02611D931EEA5317009714B8 /* AppDelegate.swift */,
-				7CB24618211E106200EDB2C5 /* EyeGraphic.swift */,
+				207829AF21251F86007A7EBA /* EyeGraphic.swift */,
 				7C924552211FD0B500492749 /* CalibrationVC.swift */,
 				7C79E5CC21212F68000EDBCF /* FocusInstructionsVC.swift */,
 				7CB2461C211E11EF00EDB2C5 /* MainVC.swift */,
@@ -178,7 +178,6 @@
 				7C355B26212219A900D17D32 /* FollowGameVC.swift in Sources */,
 				7C355B28212219C400D17D32 /* OpeningVC.swift in Sources */,
 				7CB2461D211E11EF00EDB2C5 /* MainVC.swift in Sources */,
-				7CB24619211E106200EDB2C5 /* EyeGraphic.swift in Sources */,
 				7C924553211FD0B500492749 /* CalibrationVC.swift in Sources */,
 				02611D941EEA5317009714B8 /* AppDelegate.swift in Sources */,
 				02611DA61EEA5683009714B8 /* PreviewView.swift in Sources */,
@@ -186,6 +185,7 @@
 				7C355B242122198C00D17D32 /* MenuView.swift in Sources */,
 				205FF064211DECFF00D9CFCA /* Eye.swift in Sources */,
 				7CB24621211E123F00EDB2C5 /* FollowInstructionsVC.swift in Sources */,
+				207829B021251F86007A7EBA /* EyeGraphic.swift in Sources */,
 				7C924555211FD0D400492749 /* FadingCircle.swift in Sources */,
 				7CB2461F211E121000EDB2C5 /* GameSelectVC.swift in Sources */,
 				7C924551211FD04400492749 /* Arrow.swift in Sources */,

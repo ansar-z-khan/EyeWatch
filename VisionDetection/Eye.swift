@@ -85,6 +85,18 @@ class Eye{
     func getPercentY() -> CGFloat{
         return getPercent(right: rightCorner!, left: leftCorner!, pupil: pupil!).y
     }
+    static func isCrossEyed(left: Eye,right: Eye) -> Bool{
+        let yDiffPercent = left.getPercentY() / right.getPercentY()
+        let xDiffPercent = left.getPercentX() / right.getPercentX()
+        if (yDiffPercent > 1.2 || yDiffPercent < 0.8) {
+            return true;
+        }
+        else if (xDiffPercent > 1.2 || xDiffPercent < 0.8){
+            return true;
+        }
+        return false;
+    
+    }
 
     
 }
