@@ -1,7 +1,7 @@
 # EyeWatch
 
 ## Overview
-EyeWatch is an iOS app that uses computer vision on the iOS device for medical purposes. 
+EyeWatch is an iOS app that uses computer vision on the iOS device for medical purposes. Specifically this mobile application is designed to test for binocular cordination(eyes moving in sync). If a patient does not have binocular cordination it could be a sign of many potetential medical conditions such as concussions.
 
 ## Developers
 
